@@ -37,23 +37,23 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 
 **Note:** Links to topics that we have not yet covered lead to older slides. I will update links to the new slides as we work our way through the term/slides.
 
-[**000 - Overview (Why predict?)**](https://raw.githack.com/edrubin/EC524S24/master/lecture/000/slides.html)
+[**000 - Overview (Why predict?)**](https://raw.githack.com/edrubin/EC524W25/master/lecture/000/slides.html)
 
 1. Why do we have a class on prediction?
 2. How is prediction (and how are its tools) different from causal inference?
 3. Motivating examples
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524S24/master/lecture/000/slides.html) | [.pdf](https://github.com/edrubin/EC524S24/blob/master/lecture/000/slides.pdf) | [.rmd](https://github.com/edrubin/EC524S24/blob/master/lecture/000/slides.rmd)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/master/lecture/000/slides.html) | [.pdf](https://github.com/edrubin/EC524W25/blob/master/lecture/000/slides.pdf) | [.rmd](https://github.com/edrubin/EC524W25/blob/master/lecture/000/slides.rmd)
 
 **Readings** Introduction in *ISL*
 
-[**001 - Statistical learning foundations**](https://raw.githack.com/edrubin/EC524S24/master/lecture/001/slides.html)
+[**001 - Statistical learning foundations**](https://raw.githack.com/edrubin/EC524W25/master/lecture/001/slides.html)
 
 1. Why do we have a class on prediction?
 2. How is prediction (and how are its tools) different from causal inference?
 3. Motivating examples
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524S24/master/lecture/001/slides.html) | [.pdf](https://github.com/edrubin/EC524S24/blob/master/lecture/001/slides.pdf) | [.rmd](https://github.com/edrubin/EC524S24/blob/master/lecture/001/slides.rmd)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/master/lecture/001/slides.html) | [.pdf](https://github.com/edrubin/EC524W25/blob/master/lecture/001/slides.pdf) | [.rmd](https://github.com/edrubin/EC524W25/blob/master/lecture/001/slides.rmd)
 
 **Readings**
 
@@ -222,31 +222,25 @@ Due: 28 May 2024 (submit on Canvas)
 
 ## Class project
 
-[Outline of the project](https://github.com/edrubin/EC524S24/tree/master/projects/class-project)
+[Outline of the project](https://github.com/edrubin/EC524W25/tree/master/projects/class-project)
 
-**Topic due by midnight on 03 May 2024**.
+**Topic due by midnight on 09 February 2025**.
 
-**Final project submission due by midnight on 03 June 2024.**
+**Final project submission due by 11:59p on 12 March 2025.**
 
 ## Final exam
 
 **Prep materials**
 <br>
-[Previous take-home exam](exam/past-home/README.md)
+Previous take-home exam: [2023](exam/past-home/home-23.md) | [2024](exam/past-home/home-24.md) 
 <br>
-[Previous in-class exam](exam/past-class/exam-inclass.pdf)
+Previous in-class exams: [2023](exam/past-class/inclass-23.pdf) | [2024](exam/past-class/inclass-24.pdf)
 <br>
 *Note:* I am not providing keys.
 
-[**Take-home portion**](exam/exam-home/README.md)
+**In-class exam**: *Monday (17 March 2025) at 10:15a–12:15p*
 <br>
-*Submit on Canvas by 10:15a Pacific on Friday, 14 June 2024*
-<br>
-*Weight:* Approximately 25%
-
-**In-class portion**
-<br>*Friday (14 June 2024) at 10:15a–12:15p*
-<br>*Weight:* Approximately 75%
+*Note:* Previous years had a take-home portion of the final exam. This year, we will only have an in-class exam.
 
 ## Lab notes
 
