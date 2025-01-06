@@ -218,6 +218,10 @@ Planned projects
 
 ## Final exam
 
+**In-class exam**: *Monday (17 March 2025) at 10:15a–12:15p*
+<br>
+*Note:* Previous years had a take-home portion of the final exam. This year, we will only have an in-class exam.
+
 **Prep materials**
 <br>
 Previous take-home exam: [2023](exam/past-home/home-23.md) | [2024](exam/past-home/home-24.md) 
@@ -225,10 +229,6 @@ Previous take-home exam: [2023](exam/past-home/home-23.md) | [2024](exam/past-ho
 Previous in-class exams: [2023](exam/past-class/inclass-23.pdf) | [2024](exam/past-class/inclass-24.pdf)
 <br>
 *Note:* I am not providing keys.
-
-**In-class exam**: *Monday (17 March 2025) at 10:15a–12:15p*
-<br>
-*Note:* Previous years had a take-home portion of the final exam. This year, we will only have an in-class exam.
 
 ## Lab notes
 
