@@ -11,8 +11,8 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 
 **Office hours**
 
-- **Ed Rubin** Tu. 2:30p–3:40p
-- **Andrew Dickinson** We. 3p–4p
+- **Ed Rubin** Tu. 2:30p–3:40p (PLC 530)
+- **Andrew Dickinson** We. 3p–4p (Zoom)
 
 ## Syllabus
 
@@ -193,32 +193,20 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 
 Planned projects
 
-**000** [Predicting sales price in housing data (Kaggle)](https://github.com/edrubin/EC524S24/tree/master/projects/project-000)
-
-Due: 20 April 2024 (submit on Canvas)
+**000** Predicting sales price in housing data (Kaggle)
 
 **Help:** 
 
 - [A simple example/walkthrough](https://www.kaggle.com/edwardarubin/project-000-example)
 - [Kaggle notebooks](https://rpubs.com/Clennon/KagNotes) (from Connor Lennon)
 
-**001** [Validation and out-of-sample performance](https://github.com/edrubin/EC524S24/tree/master/projects/project-001)
+**001** Validation and out-of-sample performance
 
-Due: 03 May 2024 (submit on Canvas)
+**002** Penalized regression, logistic regression, and classification
 
-[Solution guide](https://raw.githack.com/edrubin/EC524S24/master/projects/project-001/key-001.html)
-
-**002** [Penalized regression, logistic regression, and classification](https://github.com/edrubin/EC524S24/tree/master/projects/project-002)
-
-Due: 18 May 2024 (submit on Canvas)
-
-**003** [Trees, ensembles, and imputation](projects/project-003)
+**003** Trees, ensembles, and imputation
 
 [Help from class](projects/project-003/help-003.md)
-
-[Key](https://raw.githack.com/edrubin/EC524S24/master/projects/project-003/key-003.html)
-
-Due: 28 May 2024 (submit on Canvas)
 
 ## Class project
 
