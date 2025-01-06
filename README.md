@@ -11,7 +11,7 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 
 **Office hours**
 
-- **Ed Rubin** Tu. 2:30p–3:40p (PLC 530)
+- **Ed Rubin** Tu. 2:30p–3:40p ([PLC 530](https://map.uoregon.edu/b83e556a1))
 - **Andrew Dickinson** We. 3p–4p (Zoom)
 
 ## Syllabus

@@ -333,7 +333,7 @@ knitr::include_graphics("images/ml-issues.jpeg")
 
 And of course...
 
-[**OpenAI**](https://openai.com/), [**ChatGPT**](https://openai.com/blog/chatgpt/), ...
+[**OpenAI**](https://openai.com/), [**ChatGPT**](https://openai.com/blog/chatgpt/), [**Copilot**](https://github.com/features/copilot), [**Claude**](https://claude.ai/), [**Midjourney**](https://www.midjourney.com/) ...
 
 ---
 layout: false
@@ -389,11 +389,3 @@ Sources (articles) of images
 - <a href="#sources">Image sources</a>
 ]
 ]
-
-```{r, build pdfs, include = F, eval = F}
-renderthis::to_pdf(
-  from = '000-slides.html',
-  complex_slides = TRUE,
-  partial_slides = TRUE
-)
-```

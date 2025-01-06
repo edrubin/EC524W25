@@ -73,7 +73,7 @@ name: admin-today
 - .note[Course website:] [https://github.com/edrubin/EC524W25/](https://github.com/edrubin/EC524W25/)
 - .note[Resources]
   - [RStudio](https://education.rstudio.com/learn/) cheatsheets, books, and tutorials
-  - [UO library](https://library.uoregon.edu/data-services)
+  - [UO library](https://library.uoregon.edu/data-services): [Workshops](https://uoregon.libcal.com/calendar/dataservices?cid=11979&t=d&d=0000-00-00&cal=11979,11173,6522,3731&inc=0), [Help Desk](https://map.uoregon.edu/d991368cc), [Consultation](https://uoregon.libcal.com/appointments/data_services), and more!
   - See course page for more...
 - .note[Content:] Formalize statistical learning, notation, goals (and problems)
 
@@ -946,11 +946,3 @@ I pulled the comic from [Twitter](https://twitter.com/athena_schools/status/1063
 - [Sources/references](#sources)
 ]
 ]
-
----
-exclude: true
-
-
-```{r, build pdfs, include = FALSE, eval = FALSE}
-pagedown::chrome_print("001-slides.html", "001-slides.pdf", wait = 4, timeout = 120)
-```
