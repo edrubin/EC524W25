@@ -2,7 +2,9 @@
 title: "EC524W25: Lab 001"
 subtitle: "Workflow and cleaning"
 author: "Andrew Dickinson"
-format: html
+format: 
+  html:
+    self_contained: true
 ---
 
 ```{r echo=FALSE, message=FALSE}
