@@ -248,21 +248,9 @@ Approximate/planned topics...
 Follow these steps to get started on the lab this week.
 
 1. Install Quarto. Follow this [link](https://quarto.org/docs/getting-started/installation.html), download the installer for your operating system, and follow the instructions to install Quarto
-2. Download (_and unzip_) the following lab materials:
-	- [Ames Housing data]()
-	- [Quarto document]()
+2. Download (_and unzip_) the housing data and the Quarto document (links below)
 3. Create a project in RStudio in a separate folder
 4. Copy/move the data files and the Quarto document to a folder dedicated to this lab. For example:
-```
-		.
-		├── 001-projects.Rproj
-		├── data
-		│   ├── data_description.txt
-		│   ├── sample_submission.csv
-		│   ├── test.csv
-		│   └── train.csv
-		└── doc001.qmd
-```
 5. Open the Quarto document (`doc001.qmd`) in RStudio and follow the instructions to get started on this weeks lab
 
 Housing data [download](https://github.com/edrubin/EC524W22/raw/master/lab/001-cleaning/data/house-prices-advanced-regression-techniques.zip)
