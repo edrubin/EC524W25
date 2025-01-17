@@ -4,7 +4,7 @@ subtitle: "Workflow and cleaning"
 author: "Andrew Dickinson"
 format: 
   html:
-    self_contained: true
+    embed-resources: true
 ---
 
 ```{r echo=FALSE, message=FALSE}
