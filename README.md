@@ -255,7 +255,7 @@ Follow these steps to get started on the lab this week.
 
 Housing data [download](https://github.com/edrubin/EC524W22/raw/master/lab/001-cleaning/data/house-prices-advanced-regression-techniques.zip)
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/001-projects/doc001.html) | [.Qmd](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/001-projects/doc001.qmd)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/001-projects/doc001.html) | [.Qmd](https://github.com/edrubin/EC524W25/blob/master/lab/001-projects/doc001.qmd)
 
 [**002 - Validation**](https://raw.githack.com/edrubin/EC524W22/master/lab/002-validation/R/002-validation.html)
 
