@@ -320,6 +320,10 @@ Housing data [download](https://github.com/edrubin/EC524W22/raw/master/lab/001-c
 
 ## Additional resources
 
+### Jobs
+
+I wrote a very short guide to [finding a job](jobs).
+
 ### R
 
 - [UO library resources/workshops](https://researchguides.uoregon.edu/library_workshops)
