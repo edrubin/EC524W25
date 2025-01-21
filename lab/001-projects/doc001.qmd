@@ -1,0 +1,203 @@
+---
+title: "EC524W25: Lab 001"
+subtitle: "Workflow and cleaning"
+author: "Andrew Dickinson"
+format: 
+  html:
+    embed-resources: true
+---
+
+```{r echo=FALSE, message=FALSE}
+# Code chunk options
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 6,
+  fig.height = 4
+)
+
+# Load the tidyverse
+library(tidyverse)
+```
+
+> **Autodidacticism** *(ˌɔː.təʊ.dɪˈdæk.tɪ.sɪ.zəm)*  
+Autodidacticism or **self-education** (*self-learning, self-study, self-teaching*) is the practice of acquiring knowledge or skills without formal guidance from teachers, professors, or educational institutions.  
+
+
+#### Lab goals:
+
+1. **Introduction to Quarto**: A short introduction to a new tool for writing documents
+2. **Practice using RStudio projects**: Create a new project for the lab and load the data 
+3. `dplyr` **data manipulation questions**: Three practice dplyr problems for review
+
+:::{.panel-tabset}
+
+## An introduction to Quarto
+
+Quarto is a new document format that is designed to be a more flexible and powerful alternative to R Markdown. Quarto documents are written in markdown and can include code chunks that are executed in a variety of languages such as R and Python.
+
+For the remainder of the quarter, I will be providing you with a **template** Quarto document with instructions to complete each lab. Code chunks will be left blank for you to fill in, as if this were a normal R script. Before getting started, take a 5 minutes to read through the "[Hello, Quarto](<https://quarto.org/docs/get-started/hello/rstudio.html>)" tutorial.
+
+Finally, make sure this document compiles properly by clicking the **Render** button above, or by pressing `Cmd/Ctrl + Shift + K`.
+
+
+## Projects, directories, and RStudio
+
+Before we can start any analysis, we need to load the data in RStudio. There are many ways to do this, but just a little forward thinking on project work flow will save us headaches later. 
+
+As discussed last week, we will be using RStudio projects to manage our work. This is a great way to keep organized between separate projects (assignments) and simplify the process of loading data and saving files. To recap, here are the steps to create a new project:
+
+0. Create a new directory for EC524, somewhere (e.g., Desktop, Documents, iCloud, Dropbox, etc.)
+1. Within this directory, create the following subdirectories:
+  ```bash
+        EC524W25              # Class folder
+        └── lab               # Lab folder
+            └── 001-projects  # Separate folder for the lab 000 project
+        
+  ```
+2. Open RStudio
+3. Click on **File** > **New Project...** > **Existing Directory** and navigate to the separate project folder under "lab" > "001-projects"^[Note: You can name your folders whatever you like, these are just my naming conventions] and click **Create Project**. RSudio will open a new session with the working directory set to the project folder
+4. Move the data files and Quarto document into the project folder
+5. Open the `doc001.qmd` file in the project folder to get started
+
+After completing these steps, here is an visualization of a well organized directory structure:
+
+```bash
+   EC524W25                                # Class folder  
+   └──lab                                  # Lab folder
+      ├── 001-projects                     # Project folder
+      │   ├── 001-projects.Rproj           # Rproj file (we are here)
+      │   ├── data                         # Data folder
+      │   │   ├── data_description.txt     
+      │   │   ├── sample_submission.csv    
+      │   │   ├── test.csv                 
+      │   │   └── train.csv                
+      │   └── doc001.qmd                   # Quarto document
+      └── 002-...                          # Future lab projects with similar structure
+
+```
+
+
+### Loading the data
+
+Now that we have our project set up, let's load the data. First, let's see where we are on our computers
+
+```{r eval=FALSE}
+# The following function prints the current working directory
+getwd()
+```
+
+You should find the output of the `getwd()` function to be the path to the project folder. This is our **working directory**, or `.` for short. This is where R will look for files when we use relative paths.
+
+Let's load the data in the code chunk below using the `read_csv` function. For quick reference for this function type `?read_csv` in the console.
+
+```{r}
+# Load train.csv 
+# train_df = read_csv(...)  # uncomment and fill in the code
+```
+
+::: {.callout-tip}
+Use `Tab` completion to help you fill in the code. For example, type `read_csv("data/` and press `Tab` to see the files in the data folder.
+:::
+
+If the read worked, the following code should print out the first 6 rows in the console:
+
+```{r eval=FALSE}
+# Print the first 6 rows of the data
+head(train_df)
+```
+
+If this worked, we are ready to move on. If not, double check your work or wait for me to come around and help.
+
+
+## `dplyr` questions
+
+If you have managed to load the "train.csv" data as the `train_df` object, the following questions will test your knowledge of the `dplyr` package. There are three questions (easy, medium, and hard), each with a code chunk to fill in your answer.
+
+<br>
+
+### Question 01 
+_(easy)_
+
+**Task**: Filter the dataset to only include rows with the two story houses that were built since 2000. Return only the following columns in the output: `Id`, `YearBuilt`, `HouseStyle`. Order the result by year built in descending order.
+
+```{r}
+# Your answer here
+
+```
+
+#### Expected output
+
+```{r eval=FALSE}
+# A tibble: 143 × 3
+|   Id | year_built | house_style |
+|------|------------|-------------|
+|   88 |       2009 | 2Story      |
+|  158 |       2009 | 2Story      |
+|  213 |       2009 | 2Story      |
+|  461 |       2009 | 2Story      |
+|  573 |       2009 | 2Story      |
+|  763 |       2009 | 2Story      |
+```
+
+<br>
+
+### Question 02
+_(medium)_
+
+**Task**: Create a new column called `TotalSF` that is the sum of the `1stFlrSF` and `2ndFlrSF` columns. Filter the dataset to only include rows with a total square footage greater than 3,000. Return only the `Id` and `TotalSF` columns in the output.
+
+```{r}
+# Your answer here
+
+```
+
+#### Expected output
+
+```{r eval=FALSE}
+# A tibble: 12 × 2
+|   id | total_sqft |
+|------|------------|
+|  119 |       3222 |
+|  186 |       3036 |
+|  305 |       3493 |
+|  497 |       3228 |
+|  524 |       4676 |
+|  609 |       3194 |
+|  692 |       4316 |
+|  770 |       3279 |
+|  799 |       3140 |
+| 1170 |       3627 |
+| 1183 |       4476 |
+| 1269 |       3447 |
+| 1299 |       5642 |
+| 1354 |       3238 |
+```
+
+<br>
+
+### Question 03
+_(hard)_
+
+**Task**: From the dataset, find the average `YearBuilt` for each `HouseStyle`, but only include `HouseStyle`s where more than 20 houses were built after the year 2000. Sort the resulting data frame by `YearBuilt` in descending order.
+
+```{r}
+# Your answer here
+
+```
+
+#### Expected output
+
+```{r eval=FALSE}
+# A tibble: 3 × 3
+| house_style | average_year_built |   n   |
+|-------------|--------------------|-------|
+| 1Story      | 2005.0             |  211  |
+| 2Story      | 2005.0             |  143  |
+| SLvl        | 2004.0             |    6  |
+```
+
+
+
+:::

@@ -243,16 +243,18 @@ Approximate/planned topics...
 
 **Formats** [.html](https://raw.githack.com/edrubin/EC524W22/master/lab/000-cleaning/000-slides.html) | [.pdf](https://raw.githack.com/edrubin/EC524W22/master/lab/000-cleaning/000-slides.pdf) | [.Rmd](https://raw.githack.com/edrubin/EC524W22/master/lab/000-cleaning/000-slides.Rmd)
 
-[**001 - Workflow and cleaning**](https://raw.githack.com/edrubin/EC524W22/master/lab/001-cleaning/001-markdown.html) (continued)
+[**001 - Workflow and cleaning: An example**](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/001-projects/doc001.html)
 
-1. Finish previous lab on `dplyr`
-2. Working with projects
-3. Using `dpylr` and `ggplot2` to make insightful visuals
-4. How to fix a coding error
+Follow these steps to get started on the lab this week.
 
-Housing data [download](https://github.com/edrubin/EC524W22/raw/master/lab/001-cleaning/data/house-prices-advanced-regression-techniques.zip)
+1. Install Quarto. Follow this [link](https://quarto.org/docs/getting-started/installation.html), download the installer for your operating system, and follow the instructions to install Quarto
+2. Download (_and unzip_) the [Housing data](https://github.com/edrubin/EC524W22/raw/master/lab/001-cleaning/data/house-prices-advanced-regression-techniques.zip) and the [Quarto document](https://github.com/edrubin/EC524W25/blob/master/lab/001-projects/doc001.qmd) (download button top right corner of page)
+3. Create a project in RStudio in a separate folder
+4. Copy/move the data files and the Quarto document to a folder dedicated to this lab
+5. Open the Quarto document in RStudio and follow the instructions to get started on this weeks lab
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524W22/master/lab/001-cleaning/001-markdown.html) | [.Rmd](https://raw.githack.com/edrubin/EC524W22/master/lab/001-cleaning/001-markdown.Rmd)
+
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/001-projects/doc001.html) | [.qmd](https://github.com/edrubin/EC524W25/blob/master/lab/001-projects/doc001.qmd)
 
 [**002 - Validation**](https://raw.githack.com/edrubin/EC524W22/master/lab/002-validation/R/002-validation.html)
 
