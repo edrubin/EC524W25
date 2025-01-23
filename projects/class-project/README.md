@@ -26,8 +26,9 @@ By 11:59p on **March 12th**, submit **two documents** on Canvas (share links or 
 
 | Topic | Name |
 |:---------|:---------|
-| *Topic 1* | Person 1 |
-| *Topic 2* | Person 2 |
+| *Time-series prediction* (to be refined) | Hunter Wright |
+| *Large language models (LLMs)* | Shi Zhang Ooi |
+| *Adversarial learning* | Andre Fulton |
 | *...* | ... |
 
 **Day 2 Presentations** Friday, 14 March 2025, 2p–2:50p
