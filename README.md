@@ -261,6 +261,8 @@ Follow these steps to get started on the lab this week.
 1. Creating a training and validation data set from your observations dataframe in R
 2. Writing a function to iterate over multiple models to test and compare MSEs
 
+**Download**: [zip](https://github.com/edrubin/EC524W25/blob/master/lab/002-validation/lab002.zip) file
+
 **Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/002-validation/doc002.html) | [.qmd](https://github.com/edrubin/EC524W25/blob/master/lab/002-validation/doc002.qmd)
 
 [**003 - Practice using `tidymodels`**](https://www.kaggle.com/edwardarubin/intro-tidymodels-preprocessing)
