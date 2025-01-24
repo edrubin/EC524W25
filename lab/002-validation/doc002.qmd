@@ -1,0 +1,294 @@
+---
+title: "EC524W25: Lab 002"
+subtitle: "Validation"
+author: "Andrew Dickinson"
+format: 
+  html:
+    embed-resources: true
+---
+
+```{r knitr-opts, echo=FALSE, message=FALSE}
+# Code chunk options
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 6,
+  fig.height = 4
+)
+```
+
+#### Lab goals:
+
+1.  **Wrap up 001**: Go over the solutions to the problems from last week
+2.  **Setup**: Setup our data and load packages
+2.  **Resampling methods**: Introduction to hold out groups and a quick analysis
+
+## Getting started
+
+Download the zip file under lab 002 on the course GitHub repository. Unzip the file in your "lab" folder. Click on the `.Rproj` file to open RStudio.
+
+### Setup
+
+First, install `pacman`, a package manager that will help us install and load packages. Recall we only need to install packages once. Ex.
+
+``` r
+install.packages("pacman")
+```
+
+However, we always have to load them in each new R session. We so by running the following code:
+
+```{r setup-pacman, echo=TRUE}
+library(pacman)
+```
+
+Sometimes we have to load a bunch of packages at once, which can be wordy. Ex.
+
+``` r
+# Load ALL packages
+library(tidyverse)
+library(tidymodels)
+library(broom)
+library(magrittr)
+library(janitor)
+library(here)
+```
+
+The `pacman` package can simplify our code with the `p_load` function. This function allows us to load mulitple pacakges at once. Further, if you do not have it installed, it will install it for you. Ex.
+
+```{r setup-pload, echo=TRUE}
+# Load ALL packages
+pacman::p_load(tidyverse, data.table, broom, magrittr, janitor, skimr)
+```
+
+You can use either method to load packages. The `p_load` function is a bit more concise and I use it often, but not always.
+
+::: callout-tip
+New packages can be scary. To learn more, read the vignette. Ex.
+
+```{r vignette-tip, eval=FALSE}
+browseVignettes(package = 'here')
+```
+
+Vignettes are a short introduction to the package and its functions. Great for a quick overview and reference. But not all packages have them.
+:::
+
+
+### Randomization seeds
+
+Since we are using some randomization, let's set a seed so we all get the same results. A random seed is a number used to initialize a pseudorandom number generator. Ex.
+
+```{r set-seed}
+# Set seed
+set.seed(123)
+```
+
+These functions are used to ensure that the results of our code are reproducible. This is important for debugging and sharing code and it is a good practice to include them at the beginning of your script whenever you are using randomization.
+
+
+### Data
+
+Load both the `train.csv` and `test.csv` data sets. We will be using both.
+
+```{r read-data, message=FALSE}
+# Load training data
+house_df = read_csv("data/train.csv")
+```
+
+Double check that everything is loaded correctly. Ex.
+
+```{r check-data, eval=FALSE}
+# Print first 10 observations
+head(house_df, 10)
+```
+
+These data have really crappy column names. Let's clean them up using the `clean_names` function from the `janitor` package.
+
+```{r}
+# Clean column names
+house_df = house_df %>% clean_names()
+```
+
+For today, we only need a subset. Let's trim down our data set to four columns:
+
+-   `id`: house id
+-   `sale_price`: sale price of the house
+-   `age`: age of the house at the time of the sale (difference between year sold and year built)
+-   `area`: the non-basement square-foot area of the house
+
+We can do this in a few different ways but `dplyr::transmute()` is a very convenient function to use here
+
+```{r subset-data}
+# Subset our data and create new columns
+house_df %<>% transmute(
+    id = id,
+    sale_price = sale_price / 10000,
+    age = yr_sold - year_built,
+    area = gr_liv_area
+)
+```
+
+It's always a good idea to look at the new dataframe and make sure it is exactly what we expect it to be. Any of the following is a great way to check:
+
+-  `summary()`: provides a quick overview of the data
+-  `glimpse()`: provides a more detailed overview of each column
+
+
+```{r explore-data, eval=FALSE}
+# Helpful, exploratory functions
+
+# summary(house_df)
+# glimpse(house_df)
+# skimr::skim(house_df)
+# View(house_df)
+```
+
+::: callout-tip
+`::` Notation.
+
+When we use `::` notation, we are specifying that we want to use a function from a specific package. This is useful when we have functions with the same name in different packages. Ex.
+
+```{r, eval=FALSE}
+# Use the `skim()` function from the `skimr` package
+skimr::skim(house_df)
+```
+
+Sometimes I want to use a single function from a package and don't want to load the entire package. This is how.
+
+:::
+
+
+## Resampling
+
+Today we are introducing resampling via holdout sets---a very straightforward method that is used to estimate the performance. The key concept here is that we are partitioning our data into two sets: a training set and a validation set. The training set is used to fit the model, while the validation set is used to evaluate the model's performance.
+
+
+### Create a validation set
+
+Start by creating a single validation set composed of 30% of our training data. We can draw the validation sample randomly using the `dplyr` function `sample_frac()`. The argument `size` will allow us to choose the desired sample of 30%.
+
+`dplyr`'s function `setdiff()` will give us the remaining, non-validation observation from the original training data.
+
+```{r split}
+# Draw validation set
+validation_df = house_df %>% sample_frac(size = 0.3)
+# Find remaining training set
+train_df = setdiff(house_df, validation_df)
+```
+
+::: callout-tip
+Tip. For more info, read the help file with `?sample_frac()` and `?setdiff()`.
+:::
+
+Finally, let's check our work and make sure the `training_df` + `validation_df` = `house_df`
+
+```{r check-split, eval=FALSE}
+# Check that dimensions make sense
+nrow(house_df) == nrow(validation_df) + nrow(train_df)
+```
+
+### Model fit
+
+With training and validation sets we can start train a learner on the training set and evaluate its performance on the validation set. We will use a linear regression model to predict `sale_price` using `age` and `area`. We will give some flexibility to the model by including polynomial terms for `age` and `area`.
+
+We proceed with the following steps (algorithm):
+
+1. Train a regression model with various degrees of flexibility
+2. Calculate MSE on the `training_df`
+3. Determine which degree of flexibility minimizes validation MSE
+
+#### Model specification
+
+We will fit a model of the form:
+
+\begin{align*}
+Price_i = &\beta_0 + \beta_1 * age_i^2 + \beta_2 * age_i + \beta_3 * area_i^2 +  \\ 
+          &\beta_4 * area_i + \beta_5 * age_i^2 \cdot area_i^2 + \beta_6 * age_i^2 \cdot area_i + \\
+          & \beta_7 * age_i \cdot area_i^2 + \beta_8 * area_i \cdot age_i
+\end{align*}
+
+Often in programming, we want to automate the process of fitting a model to different specifications. We can do this by defining a function
+
+We define a function below that will fit a model to the training data and return the validation MSE. The function takes two arguments: 
+
+- `deg_age` 
+- `deg_area`
+
+These arguments represent the degree of polynomial for age and area that we want to fit our model. 
+
+```{r}
+# Define function
+fit_model = function(deg_age, deg_area) {
+    # Estimate the model with training data
+    est_model = lm(
+      sale_price ~ poly(age, deg_age, raw = T) * poly(area, deg_area, raw = T),
+      data = train_df)
+    # Make predictions on the validation data
+    y_hat = predict(est_model, newdata = validation_df, se.fit = F)
+    # Calculate our validation MSE
+    mse = mean((validation_df$sale_price - y_hat)^2)
+    # Return the output of the function
+    return(mse)
+}
+```
+
+
+First let's create a dataframe that is 2 by 4x6 using the `expand_grid()` function. We will attach each model fit MSE to an additional column.
+
+```{r}
+# Take all possible combinations of our degrees
+deg_df = expand_grid(deg_age = 1:6, deg_area = 1:4)
+```
+
+Now let's iterate over all possible combinations (4x6) of polynomial specifications and see which model fit produces the smallest MSE.
+
+```{r}
+# Iterate over set of possibilities (returns a vector of validation-set MSEs)
+mse_v = mapply(
+    FUN = fit_model,
+    deg_age = deg_df$deg_age,
+    deg_area = deg_df$deg_area
+)
+```
+
+Now that we have a 1 by 24 length vector of all possible polynomial combinations, lets attach this vector as an additional column to the `deg_df` dataframe we assigned a moment ago and arrange by the smalled MSE parameter.
+
+```{r mse-result}
+# Add validation-set MSEs to 'deg_df'
+deg_df$mse = mse_v
+# Which set of parameters minimizes validation-set MSE?
+arrange(deg_df, mse)
+```
+
+Now let's turn this table into a more visual appealing plot. I used `ggplot2` to make the following heat map. Recall, less MSE is better.
+
+```{r mse-plot, echo=FALSE, fig.width=8, fig.height=6}
+# Plot
+ggplot(data = deg_df, aes(x = deg_age, y = deg_area, fill = mse)) +
+  geom_tile() +
+  hrbrthemes::theme_ipsum(base_size = 12) +
+  scale_fill_viridis_c("MSE", option = "inferno", begin = 0.1, direction = -1) +
+  scale_x_continuous(breaks = seq(1, 6, 1)) +
+  scale_y_continuous(breaks = seq(1, 6, 1)) +
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank()) +
+  labs(
+    title = 'Model fit MSE',
+    subtitle = 'Fill values denote MSE',
+    x = "Degrees of age",
+    y = 'Degrees of area',
+    colour = 'Log of MSE')
+```
+
+
+## Next week
+
+Next week, we build on these concepts, moving into LOOCV and k-fold cross validation. 
+
+**General tip**: Get started on projects early. Run into problems sooner rather than later so you can get help from me, Ed, or your classmates.
+
+Have a great weekend!!
+
+## Acknowledgements
+
+**This document is built upon notes created by a previous GE for this course Stephen Reed which you can find [here](https://www.kaggle.com/stephenreed/ec524-lecture-003/notebook?scriptVersionId=52430728)**
