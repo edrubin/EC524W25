@@ -1,0 +1,3 @@
+# TODO
+
+- [ ] Add more about "different" cross-validation approaches, e.g., time-series cross-validation and clustered CV. Seems helpful to discuss in a forecasting vs. imputation conversation: you may have the same dataset, but the "best" model and "correct" CV approaches could differ substantially.
