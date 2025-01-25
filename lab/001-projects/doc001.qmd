@@ -51,7 +51,8 @@ As discussed last week, we will be using RStudio projects to manage our work. Th
 0.  Create a new directory for EC524, somewhere (e.g., Desktop, Documents, iCloud, Dropbox, etc.)
 1.  Within this directory, create the following subdirectories:
 
-``` bash
+```
+
       EC524W25              # Class folder
       └── lab               # Lab folder
           └── 001-projects  # Separate folder for the lab 000 project
@@ -65,7 +66,8 @@ As discussed last week, we will be using RStudio projects to manage our work. Th
 
 After completing these steps, here is an visualization of a well organized directory structure:
 
-``` bash
+```
+
    EC524W25                                # Class folder  
    └──lab                                  # Lab folder
       ├── 001-projects                     # Project folder
@@ -76,7 +78,8 @@ After completing these steps, here is an visualization of a well organized direc
       │   │   ├── test.csv                 
       │   │   └── train.csv                
       │   └── doc001.qmd                   # Quarto document
-      └── 002-...                          # Future lab projects with similar structure
+      └── 002-...                          # Future lab projects
+      
 ```
 
 ### Loading the data
