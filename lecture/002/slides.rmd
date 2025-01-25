@@ -72,7 +72,7 @@ name: admin-today
 
 - Model accuracy
 - Loss for regression and classification
-- The variance bias-tradeoff
+- The bias-variance tradeoff
 - The Bayes classifier
 - KNN
 
