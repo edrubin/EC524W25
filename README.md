@@ -194,6 +194,7 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 Planned projects
 
 **000** Predicting sales price in housing data (Kaggle)
+<br> *Due:* Friday 31 January 2025 by noon (12:00 PM) Pacific
 
 **Help:** 
 

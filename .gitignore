@@ -4,12 +4,15 @@ lecture/00[4-9]*
 lecture/01*
 
 # Temporary holds: Projects
-projects/project*
+projects/project-00[1-9]*
 
 # Exams
 exam/exam*
 
 # Project-specific files
+projects/project-000/code*
+projects/project-000/data*
+projects/project-000/*.Rproj
 
 # Data
 lecture/010/train.csv
