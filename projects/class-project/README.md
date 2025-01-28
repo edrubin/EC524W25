@@ -27,9 +27,10 @@ By 11:59p on **March 12th**, submit **two documents** on Canvas (share links or 
 | Topic | Name |
 |:---------|:---------|
 | *Time-series prediction* (to be refined) | Hunter Wright |
+| *Neural nets* | Ocea Roberts Thompson |
+| *Natural language processing (NLP)* | Wenbo Teng |
 | *Large language models (LLMs)* | Shi Zhang Ooi |
 | *Adversarial learning* | Andre Fulton |
-| *Natural language processing (NLP)* | Wenbo Teng |
 | *...* | ... |
 
 **Day 2 Presentations** Friday, 14 March 2025, 2p–2:50p

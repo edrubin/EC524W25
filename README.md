@@ -11,7 +11,7 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 
 **Office hours**
 
-- **Ed Rubin** Tu. 2:30p–3:40p ([PLC 530](https://map.uoregon.edu/b83e556a1))
+- **Ed Rubin** Tu. 2:30p–3:30p ([PLC 530](https://map.uoregon.edu/b83e556a1))
 - **Andrew Dickinson** We. 3p–4p (Zoom)
 
 ## Syllabus
@@ -195,7 +195,7 @@ Past, present, and future projects.
 
 [**000** Predicting sales price in housing data (Kaggle)](projects/project-000)
 
-*Due:* Friday 31 January 2025 by noon (12:00 PM) Pacific
+*Due:* Friday 31 January 2025 by midnight (before 11:59 PM) Pacific
 
 **Help:** 
 
