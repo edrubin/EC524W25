@@ -202,7 +202,9 @@ Past, present, and future projects.
 - [A simple example/walkthrough](https://www.kaggle.com/edwardarubin/project-000-example)
 - [Kaggle notebooks](https://rpubs.com/Clennon/KagNotes) (from Connor Lennon)
 
-**001** Validation and out-of-sample performance
+[**001** Validation and out-of-sample performance](projects/project-001)
+
+*Due:* Tuesday 11 February 2025 by midnight (before 11:59 PM) Pacific
 
 **002** Penalized regression, logistic regression, and classification
 
