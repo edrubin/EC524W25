@@ -1,24 +1,8 @@
 # Prediction
 
-**Due 04 May 2024 by 11:59 PM (Pacific)**
+**Due Tuesday 11 February 2025 by 11:59 PM (Pacific)**
 
 With your fancy new ML tools, we are going to return to the problem of predicting housing-sales prices that you saw in the [first problem set](projects/project-000).
-
-## Help!
-
-In addition to the lab materials, lecture notes, and books, don't forget that we also have a bunch of Kaggle notebooks that could help:
-
-- [An introduction to preprocessing with `tidymodels`](https://www.kaggle.com/edwardarubin/intro-tidymodels-preprocessing). (Kaggle notebook)
-- [An introduction to modeling with `tidymodels`](https://www.kaggle.com/edwardarubin/intro-tidymodels-modeling). (Kaggle notebook)
-- [An introduction to resampling, model tuning, and workflows with `tidymodels`](https://www.kaggle.com/edwardarubin/intro-tidymodels-resampling) (Kaggle notebook)
-- [Introduction to `tidymodels`: Follow up for Kaggle](https://www.kaggle.com/edwardarubin/intro-tidymodels-split-kaggle)
-
-You can always look at [what other people have done on Kaggle](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques/code?competitionId=5407&language=R&excludeNonAccessedDatasources=true).
-
-Some of the examples from last time might be useful:
-
-- I put together a very [simple example of a Kaggle notebook](https://www.kaggle.com/edwardarubin/project-000-example).
-- Connor Lennon has a [helpful guide to Kaggle competitions](https://rpubs.com/Clennon/KagNotes). Some of it uses stuff we haven't seen in our course **yet**.
 
 ## Getting started
 

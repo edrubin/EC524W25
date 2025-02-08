@@ -1,6 +1,6 @@
 # Prediction
 
-**Due 31 January 2025 by midnight (11:59 PM) Pacific**
+**Due 31 January 2025 by noon (12:00 PM) Pacific**
 
 It's time to do some prediction.
 
@@ -35,7 +35,7 @@ Connor Lennon has a [helpful guide to Kaggle competitions](https://rpubs.com/Cle
 
 ## Get to work
 
-4. Estimate several (at least three) predictive models (i.e., 3+ different regressions) of `SalePrice` using the training data.
+4. Estimate several (at least three) predictive models of `SalePrice` using the training data.
    - You're in charge here, do whatever you think will achieve the goal of **good out-of-sample predictions**—interactions, polynomials, lots of variables, *etc.*
    - **Important:** You will need a way to "deal with" missing values (`NA`s)—*and* you will need to apply this strategy in both the training and in the testing datasets.
    - *Another hint:* You probably don't want to use `Id` when fitting your model.
