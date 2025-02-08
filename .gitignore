@@ -5,6 +5,7 @@ lecture/01*
 
 # Temporary holds: Projects
 projects/project-00[2-9]*
+projects/project-001/key*
 
 # Exams
 exam/exam*
