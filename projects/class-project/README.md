@@ -31,11 +31,15 @@ By 11:59p on **March 12th**, submit **two documents** on Canvas (share links or 
 | *Natural language processing (NLP)* | Wenbo Teng |
 | *Large language models (LLMs)* | Shi Zhang Ooi |
 | *Adversarial learning* | Andre Fulton |
-| *Bayesian ML* | Sanam Haddadian |
+| *Bayesian ML* | Jane Morgan |
+| *Bayesian methods* | Sanam Haddadian |
 | *Transfer learning* | Michelle Ohwobete |
 | *Bayesian prediction intevals* | Sebastian Jaramillo Diaz |
-| *Heterogeneous treatment effects* | Mira Cross |
+| *Causal forests* | Mira Cross |
 | *Fraud/anomaly detection* | Yulisa Lopez Jeronimo |
+| *Double-debiased ML* | Tom Ben-Shahar |
+| *Image processing* | Miles Jew |
+| *Clustering algorithms* | Setareh Shiralian |
 
 **Day 2 Presentations** Friday, 14 March 2025, 2p–2:50p
 
