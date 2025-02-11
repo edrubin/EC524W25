@@ -204,7 +204,7 @@ Past, present, and future projects.
 
 [**001** Validation and out-of-sample performance](projects/project-001)
 
-*Due:* Tuesday 11 February 2025 by midnight (before 11:59 PM) Pacific
+*Due:* Thursday 13 February 2025 by midnight (before 11:59 PM) Pacific
 
 **002** Penalized regression, logistic regression, and classification
 

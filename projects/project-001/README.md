@@ -1,6 +1,6 @@
 # Prediction
 
-**Due Tuesday 11 February 2025 by 11:59 PM (Pacific)**
+**Due Thursday 13 February 2025 by 11:59 PM (Pacific)**
 
 With your fancy new ML tools, we are going to return to the problem of predicting housing-sales prices that you saw in the [first problem set](projects/project-000).
 
