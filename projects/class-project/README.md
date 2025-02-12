@@ -32,9 +32,9 @@ By 11:59p on **March 12th**, submit **two documents** on Canvas (share links or 
 | *Large language models (LLMs)* | Shi Zhang Ooi |
 | *Adversarial learning* | Andre Fulton |
 | *Bayesian neural networks* | Jane Morgan |
-| *Bayesian methods* | Sanam Haddadian |
+| *ML in experiments* | Sanam Haddadian |
 | *Transfer learning* | Michelle Ohwobete |
-| *Bayesian prediction intevals* | Sebastian Jaramillo Diaz |
+| *MCMC in prediction* | Sebastian Jaramillo Diaz |
 | *Causal forests* | Mira Cross |
 | *Fraud/anomaly detection* | Yulisa Lopez Jeronimo |
 | *Double-debiased ML* | Tom Ben-Shahar |
