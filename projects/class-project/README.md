@@ -42,6 +42,7 @@ By 11:59p on **March 12th**, submit **two documents** on Canvas (share links or 
 | *Clustering algorithms* | Setareh Shiralian |
 | *Reinforcement learning* | Isaac Wilfong |
 | *Maximum likelihood estimation* | Natalie Mathers |
+| *LightGBM and Catboost (esp. with imbalance)* | Woojin Kim |
 
 **Day 2 Presentations** Friday, 14 March 2025, 2p–2:50p
 

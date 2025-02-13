@@ -591,8 +591,8 @@ est_logistic = glm(
 layout: false
 class: clear
 
-```{r, summary-glm, highlight.output = 10:12}
-est_logistic %>% summary()
+```{r, summary-glm, highlight.output = 5:8}
+est_logistic |> summary()
 ```
 
 ---
@@ -608,8 +608,8 @@ name: logistic-prediction
 b0 = est_logistic$coefficients[1]
 b1 = est_logistic$coefficients[2]
 # Rounded
-br0 = est_logistic$coefficients[1] %>% round(2)
-br1 = est_logistic$coefficients[2] %>% round(4)
+br0 = est_logistic$coefficients[1] |> round(2)
+br1 = est_logistic$coefficients[2] |> round(4)
 ```
 
 Thus, our estimates are $\hat{\beta}_0 \approx `r br0`$ and $\hat{\beta}_1 \approx `r br1`$.
@@ -1471,9 +1471,3 @@ These notes draw upon
 ]
 ]
 
----
-exclude: true
-
-```{r, create pdfs, eval = F, include = F}
-pagedown::chrome_print("006-slides.html", timeout = 60)
-```

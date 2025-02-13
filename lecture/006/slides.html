@@ -537,7 +537,7 @@ class: clear
 
 
 ``` r
-est_logistic %&gt;% summary()
+est_logistic |&gt; summary()
 ```
 
 ```
@@ -545,14 +545,14 @@ est_logistic %&gt;% summary()
 #&gt; Call:
 #&gt; glm(formula = i_default ~ balance, family = "binomial", data = default_df)
 #&gt; 
-#&gt; Coefficients:
-#&gt;               Estimate Std. Error z value Pr(&gt;|z|)    
-#&gt; (Intercept) -1.065e+01  3.612e-01  -29.49   &lt;2e-16 ***
-#&gt; balance      5.499e-03  2.204e-04   24.95   &lt;2e-16 ***
+*#&gt; Coefficients:
+*#&gt;               Estimate Std. Error z value Pr(&gt;|z|)    
+*#&gt; (Intercept) -1.065e+01  3.612e-01  -29.49   &lt;2e-16 ***
+*#&gt; balance      5.499e-03  2.204e-04   24.95   &lt;2e-16 ***
 #&gt; ---
-*#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-*#&gt; 
-*#&gt; (Dispersion parameter for binomial family taken to be 1)
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+#&gt; 
+#&gt; (Dispersion parameter for binomial family taken to be 1)
 #&gt; 
 #&gt;     Null deviance: 2920.6  on 9999  degrees of freedom
 #&gt; Residual deviance: 1596.5  on 9998  degrees of freedom

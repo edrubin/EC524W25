@@ -63,7 +63,7 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 
 **Supplements** [Unsupervised character recognization](https://colah.github.io/posts/2014-10-Visualizing-MNIST/)
 
-[**002 - Model accuracy**](https://raw.githack.com/edrubin/EC524S24/master/lecture/002/slides.html)
+[**002 - Model accuracy**](https://raw.githack.com/edrubin/EC524W25/master/lecture/002/slides.html)
 
 1. Model accuracy
 1. Loss for regression and classification
@@ -71,14 +71,14 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 1. The Bayes classifier
 1. KNN
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524S24/master/lecture/002/slides.html) | [.pdf](https://github.com/edrubin/EC524S24/blob/master/lecture/002/slides.pdf) | [.rmd](https://github.com/edrubin/EC524S24/blob/master/lecture/002/slides.rmd)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/master/lecture/002/slides.html) | [.pdf](https://github.com/edrubin/EC524W25/blob/master/lecture/002/slides.pdf) | [.rmd](https://github.com/edrubin/EC524W25/blob/master/lecture/002/slides.rmd)
 
 **Readings** 
 
 - *ISL* Ch2–Ch3
 - *Optional:* *100ML* Preface and Ch1–Ch4
 
-[**003 - Resampling methods**](https://raw.githack.com/edrubin/EC524S24/master/lecture/003/slides.html)
+[**003 - Resampling methods**](https://raw.githack.com/edrubin/EC524W25/master/lecture/003/slides.html)
 
 1. Review
 1. The validation-set approach
@@ -86,7 +86,7 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 1. k-fold cross validation
 1. The bootstrap
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524S24/master/lecture/003/slides.html) | [.pdf](https://github.com/edrubin/EC524S24/blob/master/lecture/003/slides.pdf) | [.rmd](https://github.com/edrubin/EC524S24/blob/master/lecture/003/slides.rmd)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/master/lecture/003/slides.html) | [.pdf](https://github.com/edrubin/EC524W25/blob/master/lecture/003/slides.pdf) | [.rmd](https://github.com/edrubin/EC524W25/blob/master/lecture/003/slides.rmd)
 
 **Readings**
 
@@ -114,7 +114,7 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 - [An introduction to resampling, model tuning, and workflows with `tidymodels`](https://www.kaggle.com/edwardarubin/intro-tidymodels-resampling) (Kaggle notebook)
 - [Introduction to `tidymodels`: Follow up for Kaggle](https://www.kaggle.com/edwardarubin/intro-tidymodels-split-kaggle)
 
-[**005 - Shrinkage methods**](https://raw.githack.com/edrubin/EC524S24/master/lecture/005/slides.html)
+[**005 - Shrinkage methods**](https://raw.githack.com/edrubin/EC524W25/master/lecture/005/slides.html)
 
 (AKA: Penalized or regularized regression)
 
@@ -122,33 +122,33 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 1. Lasso
 1. Elasticnet
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524S24/master/lecture/005/slides.html) | [.pdf](https://github.com/edrubin/EC524S24/blob/master/lecture/005/slides.pdf) | [.Rmd](https://github.com/edrubin/EC524S24/blob/master/lecture/005/slides.Rmd)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/master/lecture/005/slides.html) | [.pdf](https://github.com/edrubin/EC524W25/blob/master/lecture/005/slides.pdf) | [.Rmd](https://github.com/edrubin/EC524W25/blob/master/lecture/005/slides.Rmd)
 
 **Readings**
 
 - *ISL* Ch4
 - *ISL* Ch6
 
-[**006 - Classification intro**](https://raw.githack.com/edrubin/EC524S24/master/lecture/006/slides.html)
+[**006 - Classification intro**](https://raw.githack.com/edrubin/EC524W25/master/lecture/006/slides.html)
 
 1. Introduction to classification
 1. Why not regression?
 1. But also: Logistic regression
 1. Assessment: Confusion matrix, assessment criteria, ROC, and AUC
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524S24/master/lecture/006/slides.html) | [.pdf](https://github.com/edrubin/EC524S24/blob/master/lecture/006/slides.pdf) | [.Rmd](https://github.com/edrubin/EC524S24/blob/master/lecture/006/slides.Rmd)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/master/lecture/006/slides.html) | [.pdf](https://github.com/edrubin/EC524W25/blob/master/lecture/006/slides.pdf) | [.Rmd](https://github.com/edrubin/EC524W25/blob/master/lecture/006/slides.Rmd)
 
 **Readings**
 
 - *ISL* Ch4
 
-[**007 - Decision trees**](https://raw.githack.com/edrubin/EC524S24/master/lecture/007/slides.html)
+[**007 - Decision trees**](https://raw.githack.com/edrubin/EC524W25/master/lecture/007/slides.html)
 
 1. Introduction to trees
 1. Regression trees
 1. Classification trees—including the Gini index, entropy, and error rate
 
-**Formats** [.html](https://raw.githack.com/edrubin/EC524S24/master/lecture/007/slides.html) | [.pdf](https://github.com/edrubin/EC524S24/blob/master/lecture/007/slides.pdf) | [.rmd](https://github.com/edrubin/EC524S24/blob/master/lecture/007/slides.rmd)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/master/lecture/007/slides.html) | [.pdf](https://github.com/edrubin/EC524W25/blob/master/lecture/007/slides.pdf) | [.rmd](https://github.com/edrubin/EC524W25/blob/master/lecture/007/slides.rmd)
 
 **Readings**
 
