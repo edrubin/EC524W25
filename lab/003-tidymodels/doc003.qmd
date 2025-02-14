@@ -1,0 +1,225 @@
+---
+title: "EC524W25: Lab 003"
+subtitle: "Practice with `tidymodels`"
+author: "Andrew Dickinson"
+format: 
+  html:
+    theme: 
+      - cosmo
+      - styles.scss
+    embed-resources: true
+---
+
+```{r echo=FALSE, message=FALSE}
+# Code chunk options
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 6,
+  fig.height = 4
+)
+```
+
+## Introduction
+
+In this document, we are going to keep predicting housing prices. I have set up a tidymodels workflow, including:
+
+- a recipe
+- a linear regression model
+- a cross validation strategy
+- a workflow to fit the model and to make predictions on newdata
+
+
+**Task**: Take this document and change it and make it better. Instead of using basic `lm`, switch to a **penalized regression model** using `glmnet`. Use either **Ridge**, **Lasso**, or **Elastic Net**. Change the model specification to include more variables, but make sure to start simple. Tune the model using a grid search. Make your CPU work. 
+
+Everything should be working out of the gate. Before getting started, make sure compiling the document works.
+
+**Resources**:
+
+Everything in this document is pulled from the Kaggle notebook from the previous [lab](https://www.kaggle.com/code/edwardarubin/intro-tidymodels-resampling). Use it for help.
+
+However, missing from this notebook is how to use `glmnet`. Use **the internet** to find out how to use `glmnet` with `tidymodels`. Tuning the model works the same as the `knn` example in the kaggle notebook.
+
+Lastly, ask me for help if you need it. Feel free to work together!
+
+
+---
+
+## `tidymodels` workflow
+
+### Setup
+
+First, setup the document, loading in packages, setting a random seed, loading the data, and adjusting column names
+
+```{r}
+# Load packages
+pacman::p_load(tidyverse, tidymodels, janitor, skimr, magrittr, here)
+# Set random seed
+set.seed(42)
+
+# Load the data
+train_df = read_csv(here("data", "train.csv")) %>% clean_names()
+# Rename first and second floor square footage
+train_df %<>%
+  rename(first_floor_sqft = x1st_flr_sf,
+         second_floor_sqft = x2nd_flr_sf)
+
+# Create a variable for total square footage
+train_df %<>%
+  mutate(total_sqft = first_floor_sqft + second_floor_sqft)
+
+```
+
+### Recipe
+
+Let's define the recipe for pre-processing.
+
+```{r}
+# Define the recipe
+price_recipe = recipe(
+  sale_price ~ total_sqft + condition1 + garage_area + full_bath,
+  data = train_df) %>%
+  # Omit all missing values
+  step_naomit(all_predictors()) %>%
+  # Create dummy variables for all nominal variables
+  step_dummy(all_nominal(), -all_outcomes())
+```
+
+One important note is preprocessing using recipes helps keep our analysis unadulterated when using a resampling step. This is because the preprocessing steps are applied to each fold of the data separately, ensuring that the model is getting additional information from data in the validation sets.
+
+### Model
+
+The model is where we define the type of model we want to use for the task at hand.
+
+```{r}
+# Define our linear regression model (with 'lm' engine)
+model_lm = 
+    linear_reg() %>%
+    set_mode("regression") %>%
+    set_engine("lm")
+# Check the result
+model_lm
+```
+
+
+### Workflow
+
+The `model` and the `recipe` fit together in a `workflow`. This is where we define the steps to fit the model to the data. These `workflow`s make our prediction tasks easier.
+
+```{r, message=FALSE}
+workflow() %>%
+    add_model(model_lm) %>%
+    add_recipe(price_recipe)
+```
+
+Let's define our workflow as `price_workflow`
+
+```{r}
+# Define our workflow
+price_workflow = workflow() %>%
+    add_model(model_lm) %>%
+    add_recipe(price_recipe)
+```
+
+
+### Fit the model
+
+#### Simple fit
+
+As an example of how `workflow`s fit a model with a `recipe`, let's fit the model to the data using a workflow, but without the cross validation strategy.
+
+```{r}
+# Fit the model without cross-validation
+price_workflow %>% fit(train_df)
+```
+
+#### Adding cross-validation strategy
+
+Now let's add a cross-validation strategy to our workflow. First we have to create a cross-validation strategy object. Feel free to tinker with the number of folds.
+
+```{r}
+# Create a 5-fold cross validation strategy
+rsmp_cv = train_df %>% vfold_cv(v = 5)
+```
+
+To look at the resampling splits across the data
+
+```{r, eval=FALSE}
+rsmp_cv %>% tidy()
+```
+
+
+#### Fit the model with cross-validation
+
+Now let's fit the model to the data using a workflow and a cross-validation strategy.
+
+```{r}
+fit_cv = price_workflow %>%
+    fit_resamples(resamples = rsmp_cv)
+```
+
+::: callout-tip
+One can specify which metrics to fit within the `fit_resamples` function with:
+
+```r
+
+... %>%
+fit_resamples(resamples = rsmp_cv, metrics = metric_set(r2))
+
+```
+:::
+
+
+Now it is a good idea to assess model performance. How else do you know which model is best? The following code will summarize the results of the cross-validation. Play around until you get some good results.
+
+```{r}
+# Collect the rmse metric
+fit_cv %>% collect_metrics()
+```
+
+Once you have a good model, we will want to predict on new data.
+
+Before we can predict on new data, we need to finalize our workflow. This will fit the model to the entire dataset. The following code block will finalize the workflow and fit the model to the entire dataset. 
+
+```{r}
+# Finalize workflow
+best_model = price_workflow %>%
+  finalize_workflow(select_best(fit_cv, metric = "rmse"))
+
+# Check the result
+best_model
+```
+
+Finally, now that we have a finalized workflow that has been tuned to the best model, we can fit the model to the entire dataset. We always want to use all of our training data to fit the model before making predictions on new data.
+
+```{r}
+# Fit the final workflow
+final_fit = best_model %>% fit(train_df)
+# Examine the final fit
+final_fit
+```
+
+
+### Prediction
+
+First let's load in the testing data to make our predictions on
+
+```{r}
+# Generate predictions for the test set
+test_df = read_csv(here("data", "test.csv")) %>% clean_names()
+# Rename first and second floor square footage
+test_df %<>%
+  rename(first_floor_sqft = x1st_flr_sf,
+         second_floor_sqft = x2nd_flr_sf)
+# Create a variable for total square footage
+test_df %<>%
+  mutate(total_sqft = first_floor_sqft + second_floor_sqft)
+```
+
+Now we can make predictions on the test data. It is pretty simple.
+
+```{r}
+# Predict the sale price
+predictions = predict(final_fit, new_data = test_df)
+```

@@ -1,0 +1,201 @@
+/*-- scss:defaults --*/
+
+// import fonts
+@import 'https://fonts.googleapis.com/css?family=Zilla+Slab:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
+// @import 'https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
+// @import 'https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
+// @import 'https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
+@import 'https://fonts.googleapis.com/css?family=Sarabun:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
+@import 'https://fonts.googleapis.com/css?family=IBM+Plex+Serif:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
+// @import 'https://fonts.googleapis.com/css?family=Inconsolata:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i';
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+// define fonts
+$font-family-monospace: "JetBrains Mono", monospace;
+$font-family-sans-serif: "sarabun", sans-serif;
+$presentation-heading-font: "Zilla Slab", serif;
+
+// colors
+$co-pink: #e64173;
+$co-slate: #314f4f;
+$co-purple: #6A5ACD;
+$co-orange: #FFA500;
+$co-turquoise: #44C1C4;
+$co-yellow: #D8BD44;
+$co-green: #7CAE96;
+$co-grey: #8AA19E;
+$co-blue: #3b3b9a;
+$co-red: #fb6107;
+$co-grey-mid: #7f7f7f;
+$co-grey-ml: #CCCCCC;
+$co-grey-light: #d2d2d2;
+$co-grey-vlight: #e5e5e5;
+$co-white: #ffffff;
+$co-black: #000000;
+// theme colors
+$theme-sub: $co-grey-ml;
+$link-color: $co-pink !default;
+
+
+// unicode characters
+// $new-arrow: "\2937";
+$new-arrow: "\21B3";
+
+/*-- scss:rules --*/
+
+// update code style
+.reveal code {
+  font-family: $font-family-monospace;
+  font-weight: 300;
+  // font-size: 0.95em;
+  // line-height: 1.5em;
+  // padding: 0.1em 0.2em;
+  // border-radius: 0.3em;
+  // background: mix($co-purple, white, 4%);
+  color: $co-purple;
+}
+
+// text color
+.pink {color: $co-pink;}
+.slate {color: $co-slate;}
+.purple {color: $co-purple;}
+.orange {color: $co-orange;}
+.turquoise {color: $co-turquoise;}
+.yellow {color: $co-yellow;}
+.green {color: $co-green;}
+.grey {color: $co-grey;}
+.blue {color: $co-blue;}
+.red {color: $co-red;}
+.grey-mid {color: $co-grey-mid;}
+.grey-ml {color: $co-grey-ml;}
+.grey-light {color: $co-grey-light;}
+.grey-vlight {color: $co-grey-vlight;}
+.white {color: $co-white;}
+.black {color: $co-black;}
+
+// text ornaments
+.b {font-weight: bold;}
+.mono {font-family: $font-family-monospace;}
+.ul {text-decoration: underline;}
+.ol {text-decoration: overline;}
+.xx {text-decoration: line-through;}
+.it {font-style: italic;}
+.lt {opacity: 30%;}
+.n {font-style: normal !important;}
+
+// text size
+.big {font-size: 110%;}
+.bigger {font-size: 125%;}
+.biggest {font-size: 140%;}
+.huge{font-size: 150%;}
+.small {font-size: 95%;}
+.smaller {font-size: 85%;}
+.smallest {font-size: 75%;}
+.tiny {font-size: 50%;}
+
+// fonts
+.slab {
+  // font-weight: 300;
+  font-family: 'Zilla Slab' !important;
+}
+// example
+.ex {
+  font-family: 'Zilla Slab' !important;
+  font-weight: 300;
+  font-style: italic;
+  color: $co-grey-ml;
+}
+
+// subscript and superscript
+.super {
+  vertical-align: super;
+  font-size: 70%;
+  line-height: 1%;
+}
+.sub {
+  vertical-align: sub;
+  font-size: 70%;
+  line-height: 1%;
+}
+
+// theme elements
+// subtitle on title slide
+.subtitle {
+  color: $theme-sub !important;
+  font-style: italic;
+  margin-top: 0em;
+  font-weight: lighter;
+}
+// subtitle on other slides
+.reveal h3 {
+  color: $theme-sub !important;
+  font-style: italic;
+  // font-weight: 350;
+  font-weight: lighter;
+  font-size: 0.95em;
+}
+.reveal h4 {
+  color: $theme-sub !important;
+  // font-weight: 350;
+  font-weight: normal;
+  margin-top: 1.25em;
+}
+// unordered lists
+.reveal ul {
+  // font-weight: 300;
+  font-weight: lighter;
+  padding-left: 16px;
+  li::marker {
+    color: mix($theme-sub, white, 60%);
+  }
+}
+.reveal ul ul {
+  list-style: none;
+  li:before {
+    content: $new-arrow;
+    color: mix($theme-sub, white, 60%);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+}
+.reveal .slide ul, .reveal .slide ol {
+  margin-bottom: 0em !important;
+}
+.reveal p {
+	font-weight: lighter;
+	margin-top: 1em !important;
+}
+// ordered lists
+.reveal ol {
+  // font-weight: 300;
+  font-weight: lighter;
+  padding-left: 16px;
+  li::marker {
+    color: $theme-sub;
+  }
+}
+
+// placement
+.middle {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// right justify
+.right {
+  text-align: right;
+}
+
+// solution styling
+.solution {
+  color: #4C566A !important;
+  border-left: 0.5rem solid #dee2e6;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  padding-top: 0rem;
+}
