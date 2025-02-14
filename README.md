@@ -281,7 +281,7 @@ Follow these steps to get started on the lab this week.
 2. [An introduction to modeling with `tidymodels`](https://www.kaggle.com/edwardarubin/intro-tidymodels-modeling)
 3. [An introduction to resampling, model tuning, and workflows with `tidymodels`](https://www.kaggle.com/edwardarubin/intro-tidymodels-resampling) (will finish up next week)
 
-**005 - More practice with `tidymodels`**
+[**005 - More practice with `tidymodels`**](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/003-tidymodels/003-tidymodels.html)
 
 Change an OLS workflow to a Lasso or Ridge regression workflow.
 
@@ -290,18 +290,18 @@ Change an OLS workflow to a Lasso or Ridge regression workflow.
 **Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/003-tidymodels/doc003.html) | [.qmd](https://github.com/edrubin/EC524W25/blob/master/lab/003-tidymodels/doc003.qmd)
 
 
-**005 - Summarizing `tidymodels`**
+**006 - Summarizing `tidymodels`**
 
 1. Summarizing `tidymodels`
 2. [Combining pre-split data together and then defining a custom split](https://www.kaggle.com/edwardarubin/intro-tidymodels-split-kaggle)
 
 
-[**006 - Penalized regression in `tidymodels` + functions + loops**](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html)
+[**007 - Penalized regression in `tidymodels` + functions + loops**](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html)
 
 1. Running a Ridge, Lasso or Elasticnet logistic regression in `tidymodels`.
 2. [A short lesson in writing functions and loops in R)](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html)
 
-[**007 - Finalizing a workflow in `tidymodels`: Example using a random forest**](https://raw.githack.com/edrubin/EC524W22/master/lab/007-finalize/finalize_wf.html)
+[**008 - Finalizing a workflow in `tidymodels`: Example using a random forest**](https://raw.githack.com/edrubin/EC524W22/master/lab/007-finalize/finalize_wf.html)
 
 1. [Finalizing a workflow in `tidymodels`: Example using a random forest](https://raw.githack.com/edrubin/EC524W22/master/lab/007-finalize/finalize_wf.html)
 2. [A short lesson in writing functions and loops in R (continued)](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html)
