@@ -281,6 +281,15 @@ Follow these steps to get started on the lab this week.
 2. [An introduction to modeling with `tidymodels`](https://www.kaggle.com/edwardarubin/intro-tidymodels-modeling)
 3. [An introduction to resampling, model tuning, and workflows with `tidymodels`](https://www.kaggle.com/edwardarubin/intro-tidymodels-resampling) (will finish up next week)
 
+**005 - More practice with `tidymodels`**
+
+Change an OLS workflow to a Lasso or Ridge regression workflow.
+
+**Download**: lab project [zip file](https://github.com/edrubin/EC524W25/raw/master/lab/003-tidymodels/lab003.zip)
+
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/003-tidymodels/doc003.html) | [.qmd](https://github.com/edrubin/EC524W25/blob/master/lab/003-tidymodels/doc003.qmd)
+
+
 **005 - Summarizing `tidymodels`**
 
 1. Summarizing `tidymodels`
