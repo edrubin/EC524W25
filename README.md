@@ -208,7 +208,7 @@ Past, present, and future projects.
 
 [**002** Penalized regression, logistic regression, and classification](projects/project-002)
 
-*Due:* Thursday 22 February 2025 by midnight (before 11:59 PM) Pacific
+*Due:* Saturday 22 February 2025 by midnight (before 11:59 PM) Pacific
 
 **003** Trees, ensembles, and imputation
 
