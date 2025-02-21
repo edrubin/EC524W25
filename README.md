@@ -286,6 +286,7 @@ Follow these steps to get started on the lab this week.
 [**005 - More practice with `tidymodels`**](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/003-tidymodels/doc003.html)
 
 Change an OLS workflow to a Lasso or Ridge regression workflow.
+- [Updated verion of the lab document with penalized regression](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/003-tidymodels/doc003-update.html)
 
 **Download**: lab project [zip file](https://github.com/edrubin/EC524W25/raw/master/lab/003-tidymodels/lab003.zip)
 
