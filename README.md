@@ -210,9 +210,11 @@ Past, present, and future projects.
 
 *Due:* Saturday 22 February 2025 by midnight (before 11:59 PM) Pacific
 
-**003** Trees, ensembles, and imputation
+[**003** Trees, ensembles, and imputation](projects/project-003)
 
-[Help from class](projects/project-003/help-003.md)
+*Due:* Saturday 01 March 2025 by midnight (before 11:59 PM) Pacific
+
+[Help](projects/project-003/help-003.md)
 
 ## Class project
 
