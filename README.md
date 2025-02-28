@@ -299,6 +299,8 @@ Change an OLS workflow to a Lasso or Ridge regression workflow.
 
 Setting up decision trees, with and without `tidymodels`.
 
+**Download**: [Quarto document](https://github.com/edrubin/EC524W25/blob/master/lab/004-decision-trees/doc004.qmd)
+
 **Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/004-decision-trees/doc004.html) | [.qmd](https://github.com/edrubin/EC524W25/blob/master/lab/004-decision-trees/doc004.qmd)
 
 <!-- **006 - Summarizing `tidymodels`** -->
