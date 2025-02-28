@@ -1,0 +1,236 @@
+---
+title: "EC524W25: Lab 004"
+subtitle: "Decision Trees"
+author: "Andrew Dickinson"
+format: 
+  html:
+    theme: 
+      - cosmo
+      - styles.scss
+    embed-resources: true
+---
+
+```{r echo=FALSE, message=FALSE}
+# Code chunk options
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,
+  warning = FALSE,
+  fig.width = 6,
+  fig.height = 4
+)
+```
+
+## Introduction
+
+The lab document today **should** be helpful for [Project 003](https://github.com/edrubin/EC524W25/tree/master/projects/project-003). I've included some helpful code to get you started.
+
+Though I have left out key pieces to tuning the decision trees. I'll leave that to you after I go over this basic example.
+
+
+### Setup
+
+First, setup the document, loading in packages, setting a random seed, loading the data, and adjusting column names
+
+```{r}
+# Load packages
+pacman::p_load(tidyverse, tidymodels, rpart.plot, janitor,
+               skimr, magrittr, collapse, here)
+# Set random seed
+set.seed(42)
+# Load the data
+data('penguins')
+
+```
+
+::: {.callout}
+
+The data is loaded from a package. It can be found in memory with the object name `penguins`.
+
+:::
+
+Check with skimr
+
+```{r, eval=FALSE}
+skimr::skim(penguins)
+```
+
+## Decision Trees
+
+### Without `tidymodels`
+
+> 0.3/ Hopefully you noticed we have some missing data. Let's impute. By hand. Since we're doing it by hand, let's start simply. For categorical variables, you can use the modal class. For numeric, let's use the median.
+
+```{r}
+# Impute the median for numeric columns
+penguins %<>%
+  mutate_if(is.numeric, ~replace_na(., median(., na.rm = TRUE))) %>%
+  mutate_if(is.character, ~replace_na(., mode(., na.rm = TRUE)))
+```
+
+👨‍🍳+💋+🤌
+
+> 1.2\ Try each split of island and then calculate the split's accuracy and gini.
+
+```{r}
+# Find the islands
+islands = penguins$island |> unique()
+# Example: Biscoe
+lapply(X = islands, FUN = function(i) {
+  
+  # Split into island and not island
+  grp1 = penguins |> filter(island == i)
+  grp2 = penguins |> filter(island != i)
+  
+  # Find the modal species in each group
+  species1 = grp1$species |> fmode()
+  species2 = grp2$species |> fmode()
+  
+  # Calculate accuracy
+  acc1 = fmean(grp1$species == species1)
+  acc2 = fmean(grp2$species == species2)
+  
+  # Calculate gini
+  g1 = grp1$species |> table() |> prop.table()
+  g2 = grp2$species |> table() |> prop.table()
+  gini1 = sum(g1 * (1 - g1))
+  gini2 = sum(g2 * (1 - g2))
+  gini = (gini1 + gini2)/2
+  
+  df = data.frame(
+    island = i,
+    group1 = species1,
+    group2 = species2,
+    accuracy = c(acc1, acc2),
+    gini = gini
+  )
+  
+  return(df)
+})
+```
+
+---
+
+<br>
+
+If instead you would like to visualize each split, use `rpart.plot`:
+
+```{r, fig.width=8, fig.height=6}
+# Simple decision tree
+tree_complex = decision_tree(
+  mode = "classification",
+  cost_complexity = 0.005,
+  tree_depth = 2,
+  min_n = 10
+) %>% set_engine(
+  "rpart"
+) %>% fit(species ~ island, data = penguins)
+# Plot the tree
+rpart.plot(
+  tree_complex$fit,
+  extra = 104,
+  box.palette = "YlGnBl",
+  branch.lty = 4,
+  shadow.col = "gray",
+  nn = TRUE,
+  cex = 1.2
+)
+
+```
+
+
+### `tidymodels` workflow
+
+
+#### Recipe
+
+
+```{r}
+# Reload data
+data(penguins)
+
+# Define recipe
+basic_recipe =
+  recipe(species ~ ., data = penguins) |>
+  step_impute_mode(all_nominal_predictors()) |>
+  step_impute_median(all_numeric_predictors())
+
+# Prep and bake
+basic_prep = basic_recipe |> prep()
+basic_bake = basic_prep |> bake(new_data = NULL)
+```
+
+
+#### Model
+
+
+```{r}
+# Define our decision tree learner
+tree_model = decision_tree(mode = "classification") |>
+  set_engine("rpart")
+
+```
+
+
+#### Workflow
+
+```{r}
+# Define our workflow
+workflow = workflow() %>%
+    add_model(tree_model) %>%
+    add_recipe(basic_recipe)
+```
+
+### CV 
+
+```{r}
+# Create a 5-fold cross validation strategy
+rsmp_cv = penguins %>% vfold_cv(v = 5)
+```
+
+To look at the resampling splits across the data
+
+```{r, eval=FALSE}
+rsmp_cv %>% tidy()
+```
+
+
+### Fit
+
+
+```{r}
+# Fit the model
+fit_cv = workflow %>%
+  fit_resamples(
+    resamples = rsmp_cv,
+    metrics = metric_set(roc_auc, accuracy)
+  )
+```
+
+### Model evaluation
+
+```{r}
+# Collect metrics
+fit_cv %>%
+  collect_metrics(summarize = FALSE)
+```
+
+### Prediction
+
+Once you have add some complexity to the tuning process, you will have some variation across your models (i.e. get to tuning).
+
+```{r}
+# Finalize workflow
+# best_model = workflow %>%
+  # finalize_workflow(select_best(metric = "accuracy"))
+```
+
+
+```{r}
+# Fit the final workflow
+# final_fit = best_model %>% fit(penguins)
+# Examine the final fit
+# final_fit
+```
+
+

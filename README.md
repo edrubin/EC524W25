@@ -295,21 +295,29 @@ Change an OLS workflow to a Lasso or Ridge regression workflow.
 **Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/003-tidymodels/doc003.html) | [.qmd](https://github.com/edrubin/EC524W25/blob/master/lab/003-tidymodels/doc003.qmd)
 
 
-**006 - Summarizing `tidymodels`**
+**007 - Decision trees**
 
-1. Summarizing `tidymodels`
-2. [Combining pre-split data together and then defining a custom split](https://www.kaggle.com/edwardarubin/intro-tidymodels-split-kaggle)
+Setting up decision trees, with and without `tidymodels`.
 
+**Download**: [Quarto document](https://github.com/edrubin/EC524W25/blob/master/lab/004-decision-trees/doc004.qmd)
 
-[**007 - Penalized regression in `tidymodels` + functions + loops**](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html)
+**Formats** [.html](https://raw.githack.com/edrubin/EC524W25/refs/heads/master/lab/004-decision-trees/doc004.html) | [.qmd](https://github.com/edrubin/EC524W25/blob/master/lab/004-decision-trees/doc004.qmd)
 
-1. Running a Ridge, Lasso or Elasticnet logistic regression in `tidymodels`.
-2. [A short lesson in writing functions and loops in R)](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html)
-
-[**008 - Finalizing a workflow in `tidymodels`: Example using a random forest**](https://raw.githack.com/edrubin/EC524W22/master/lab/007-finalize/finalize_wf.html)
-
-1. [Finalizing a workflow in `tidymodels`: Example using a random forest](https://raw.githack.com/edrubin/EC524W22/master/lab/007-finalize/finalize_wf.html)
-2. [A short lesson in writing functions and loops in R (continued)](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html)
+<!-- **006 - Summarizing `tidymodels`** -->
+<!---->
+<!-- 1. Summarizing `tidymodels` -->
+<!-- 2. [Combining pre-split data together and then defining a custom split](https://www.kaggle.com/edwardarubin/intro-tidymodels-split-kaggle) -->
+<!---->
+<!---->
+<!-- [**007 - Penalized regression in `tidymodels` + functions + loops**](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html) -->
+<!---->
+<!-- 1. Running a Ridge, Lasso or Elasticnet logistic regression in `tidymodels`. -->
+<!-- 2. [A short lesson in writing functions and loops in R)](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html) -->
+<!---->
+<!-- [**008 - Finalizing a workflow in `tidymodels`: Example using a random forest**](https://raw.githack.com/edrubin/EC524W22/master/lab/007-finalize/finalize_wf.html) -->
+<!---->
+<!-- 1. [Finalizing a workflow in `tidymodels`: Example using a random forest](https://raw.githack.com/edrubin/EC524W22/master/lab/007-finalize/finalize_wf.html) -->
+<!-- 2. [A short lesson in writing functions and loops in R (continued)](https://raw.githack.com/edrubin/EC524W22/master/lab/006-function_loops/006_functions_loops.html) -->
 
 ## Prediction in the media
 
