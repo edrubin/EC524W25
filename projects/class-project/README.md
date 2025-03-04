@@ -26,33 +26,30 @@ By 11:59p on **March 12th**, submit **two documents** on Canvas (share links or 
 
 | Topic | Name |
 |:---------|:---------|
-| *Time-series prediction* (to be refined) | Hunter Wright |
+| *Maximum likelihood estimation* | Natalie Mathers |
 | *Neural nets* | Ocea Roberts Thompson |
+| *Adversarial learning* | Andre Fulton |
+| *Reinforcement learning* | Isaac Wilfong |
+| *Transfer learning* | Michelle Ohwobete |
+| *Time-series with recurrent and time-delayed neural nets* | Hunter Wright |
+| *Convolutions* | Darian Miranda Olivas |
+| *Image processing* | Miles Jew |
+| *Bayesian neural networks* | Jane Morgan |
+| *MCMC in prediction* | Sebastian Jaramillo Diaz |
 | *Natural language processing (NLP)* | Wenbo Teng |
 | *Large language models (LLMs)* | Shi Zhang Ooi |
-| *Adversarial learning* | Andre Fulton |
-| *Bayesian neural networks* | Jane Morgan |
-| *ML in experiments* | Sanam Haddadian |
-| *Transfer learning* | Michelle Ohwobete |
-| *MCMC in prediction* | Sebastian Jaramillo Diaz |
-| *Causal forests* | Mira Cross |
-| *Fraud/anomaly detection* | Yulisa Lopez Jeronimo |
-| *Double-debiased ML* | Tom Ben-Shahar |
-| *Image processing* | Miles Jew |
-| *Clustering algorithms* | Setareh Shiralian |
-| *Reinforcement learning* | Isaac Wilfong |
-| *Maximum likelihood estimation* | Natalie Mathers |
-| *LightGBM and Catboost (esp. with imbalance)* | Woojin Kim |
-| *Discriminant analysis* | Marc Schlossberg |
-| *Convolutions* | Darian Miranda Olivas |
 
 **Day 2 Presentations** Friday, 14 March 2025, 2p–2:50p
 
 | Topic | Name |
 |:---------|:---------|
-| *Topic 1* | Person 1 |
-| *Topic 2* | Person 2 |
-| *...* | ... |
+| *Het. trt. effects with S- and T-learners* | Sanam Haddadian |
+| *Double-debiased ML* | Tom Ben-Shahar |
+| *Causal forests* | Mira Cross |
+| *Fraud/anomaly detection* | Yulisa Lopez Jeronimo |
+| *Clustering algorithms* | Setareh Shiralian |
+| *Discriminant analysis* | Marc Schlossberg |
+| *LightGBM and Catboost (esp. with imbalance)* | Woojin Kim |
 
 ## Some ideas for topics
 
