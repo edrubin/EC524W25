@@ -48,7 +48,7 @@ By 11:59p on **March 12th**, submit **two documents** on Canvas (share links or 
 | *Causal forests* | Mira Cross |
 | *Fraud/anomaly detection* | Yulisa Lopez Jeronimo |
 | *Clustering algorithms* | Setareh Shiralian |
-| *Discriminant analysis* | Marc Schlossberg |
+| *Discriminant analysis* | Jack Schlosser |
 | *LightGBM and Catboost (esp. with imbalance)* | Woojin Kim |
 
 ## Some ideas for topics
