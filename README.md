@@ -180,7 +180,7 @@ Welcome to Economics 524 (424): Prediction and machine-learning in econometrics,
 
 - *ISL* Ch9
 
-[**010 - Dimensionality reduction and unsupervised learning**](https://raw.githack.com/edrubin/EC524W25/master/lecture/010/010-notebook.html)
+[**010 - Dimensionality reduction and unsupervised learning**](https://raw.githack.com/edrubin/EC524W25/master/lecture/010/notebook.html)
 
 0. MNIST dataset (machines with vision)
 1. *K*-means clustering
