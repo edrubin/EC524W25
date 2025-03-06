@@ -30,14 +30,14 @@ By 11:59p on **March 12th**, submit **two documents** on Canvas (share links or 
 | *Neural nets* | Ocea Roberts Thompson |
 | *Adversarial learning* | Andre Fulton |
 | *Reinforcement learning* | Isaac Wilfong |
-| *Transfer learning* | Michelle Ohwobete |
-| *Time-series with recurrent and time-delayed neural nets* | Hunter Wright |
+| *Recurrent neural nets and LSTMs* | Hunter Wright |
 | *Convolutions* | Darian Miranda Olivas |
 | *Image processing* | Miles Jew |
-| *Bayesian neural networks* | Jane Morgan |
-| *MCMC in prediction* | Sebastian Jaramillo Diaz |
 | *Natural language processing (NLP)* | Wenbo Teng |
 | *Large language models (LLMs)* | Shi Zhang Ooi |
+| *Naive Bayes* | Michelle Ohwobete |
+| *Bayesian neural networks* | Jane Morgan |
+| *MCMC in prediction* | Sebastian Jaramillo Diaz |
 
 **Day 2 Presentations** Friday, 14 March 2025, 2p–2:50p
 
