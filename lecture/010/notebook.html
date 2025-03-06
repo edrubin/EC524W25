@@ -3794,7 +3794,7 @@ window.Quarto = {
 <span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>train_pc <span class="ot">=</span> simple_recipe_pca <span class="sc">%&gt;%</span> <span class="fu">prep</span>() <span class="sc">%&gt;%</span> <span class="fu">juice</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><em>Note:</em> You should probably scale, but a few pixels cause issues.</p>
-<p>We can repeat our <em>K</em> means clustering on the 4.1999^{4} principal components that jointly contribute to 90% of the variance in the predictors (pixels).</p>
+<p>We can repeat our <em>K</em> means clustering on the principal components that jointly contribute to 90% of the variance in the predictors (pixels).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>find_k_pca <span class="ot">=</span> <span class="fu">mclapply</span>(</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">mc.cores =</span> parallel<span class="sc">::</span><span class="fu">detectCores</span>(),</span>
@@ -4343,7 +4343,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

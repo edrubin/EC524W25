@@ -511,7 +511,7 @@ train_pc = simple_recipe_pca %>% prep() %>% juice()
 
 *Note:* You should probably scale, but a few pixels cause issues.
 
-We can repeat our *K* means clustering on the `r nrow(train_pc) - 1` principal components that jointly contribute to 90% of the variance in the predictors (pixels).
+We can repeat our *K* means clustering on the principal components that jointly contribute to 90% of the variance in the predictors (pixels).
 
 ```{r find-k-pca, cache = TRUE}
 find_k_pca = mclapply(
