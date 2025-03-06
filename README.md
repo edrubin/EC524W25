@@ -343,11 +343,6 @@ Setting up decision trees, with and without `tidymodels`.
   - Task and Purpose: [Marines outwitted an AI security camera by hiding in a cardboard box and pretending to be trees](https://taskandpurpose.com/news/marines-ai-paul-scharre/)
   - WP: [The next U.S. battle tank could use AI to identify targets](https://www.washingtonpost.com/technology/2022/10/12/abramsx-ai-hybrid-military-battle-tank/)
 
-## Misc
-
-**A funny convsersation with ChatGPT about what is real.**
-<br>*Parts:* [1](https://raw.githack.com/edrubin/EC524W23/master/misc/chatgpt-convo/01.png) [2](https://raw.githack.com/edrubin/EC524W23/master/misc/chatgpt-convo/02.png) [3](https://raw.githack.com/edrubin/EC524W23/master/misc/chatgpt-convo/03.png) [4](https://raw.githack.com/edrubin/EC524W23/master/misc/chatgpt-convo/04.png)
-
 ## Additional resources
 
 ### Jobs
