@@ -1,6 +1,7 @@
 ---
 title: "Predicting digits"
 author: "Ed Rubin"
+lightbox: true
 format:
   html:
     embed-resources: true
