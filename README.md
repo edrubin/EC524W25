@@ -226,7 +226,7 @@ Past, present, and future projects.
 
 ## Final exam
 
-**In-class exam**: *Monday (17 March 2025) at 10:15a–12:15p*
+**In-class exam**: *Monday (17 March 2025) at [8:00a–10:00a](https://registrar.uoregon.edu/dates-deadlines/exams)*
 <br>
 *Note:* Previous years had a take-home portion of the final exam. This year, we will only have an in-class exam.
 
