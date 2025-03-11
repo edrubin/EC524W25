@@ -216,6 +216,10 @@ Past, present, and future projects.
 
 [Help](projects/project-003/help-003.md)
 
+[**004** Prediction finale](projects/project-004)
+
+*Due:* Wednesday 19 March 2025 by midnight (before 11:59 PM) Pacific
+
 ## Class project
 
 [Outline of the project](https://github.com/edrubin/EC524W25/tree/master/projects/class-project)
