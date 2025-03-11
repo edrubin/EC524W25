@@ -2,7 +2,7 @@
 
 *Due: 19 March 2025*
 
-Today we return to the place where it all started: predicting housing-sales prices using a rich dataset on housing attributes.
+Today we return to the place where it all started: [predicting housing-sales prices](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/) using a rich dataset on housing attributes.
 
 **Your job** Using everything you learned this quarter, build a model to predict housing prices. And beat your first project's model. And maybe even build the best model in the class.
 
